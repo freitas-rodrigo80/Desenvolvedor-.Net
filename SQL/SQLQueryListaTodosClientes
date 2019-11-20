@@ -1,0 +1,9 @@
+
+--Listar todos os clientes do estado de SP que tenham mais de 60% das parcelas pagas.
+
+SELECT c.Nome, c.Uf FROM Clientes as c
+inner JOIN Financiamentos as f
+on c.Id = f.IdCliente
+inner JOIN Parcelas as p
+on f.Id = p.IdFinanciamento
+where c.Uf = 'SP' and p.ParcelasPagas = (p.NumeroParcelas/2)+1

@@ -1,0 +1,18 @@
+
+SELECT * FROM Parcelas
+INSERT INTO Parcelas (IdFinanciamento, NumeroParcelas, ValorParcela, DataVencimento, DataPagamento) VALUES(1, 5, 300.00, '2019-11-09',null);
+INSERT INTO Parcelas (IdFinanciamento, NumeroParcelas, ValorParcela, DataVencimento, DataPagamento) VALUES(1, 2, 500.00, '2019-11-10',null);
+INSERT INTO Parcelas (IdFinanciamento, NumeroParcelas, ValorParcela, DataVencimento, DataPagamento) VALUES(3, 5, 300.00, '2019-11-12',null);
+INSERT INTO Parcelas (IdFinanciamento, NumeroParcelas, ValorParcela, DataVencimento, DataPagamento) VALUES(2, 3, 500.00, '2019-11-11',null);
+INSERT INTO Parcelas (IdFinanciamento, NumeroParcelas, ValorParcela, DataVencimento, DataPagamento) VALUES(4, 5, 300.00, '2019-11-13',null);
+INSERT INTO Parcelas (IdFinanciamento, NumeroParcelas, ValorParcela, DataVencimento, DataPagamento) VALUES(4, 5, 300.00, '2019-11-08',null);
+INSERT INTO Parcelas (IdFinanciamento, NumeroParcelas, ValorParcela, DataVencimento, DataPagamento) VALUES(7, 5, 300.00, '2019-11-19','2019-11-19');
+INSERT INTO Parcelas (IdFinanciamento, NumeroParcelas, ValorParcela, DataVencimento, DataPagamento) VALUES(7, 5, 300.00, '2019-11-20','2019-11-20');
+INSERT INTO Parcelas (IdFinanciamento, NumeroParcelas, ValorParcela, DataVencimento, DataPagamento) VALUES(8, 5, 300.00, '2019-11-09','2019-11-09');
+INSERT INTO Parcelas (IdFinanciamento, NumeroParcelas, ValorParcela, DataVencimento, DataPagamento) VALUES(2, 5, 300.00, '2019-11-09','2019-11-09');
+INSERT INTO Parcelas (IdFinanciamento, NumeroParcelas, ValorParcela, DataVencimento, DataPagamento) VALUES(10, 5, 300.00, '2019-11-15','2019-11-15');
+INSERT INTO Parcelas (IdFinanciamento, NumeroParcelas, ValorParcela, DataVencimento, DataPagamento) VALUES(9, 5, 300.00, '2019-11-19','2019-11-19');
+INSERT INTO Parcelas (IdFinanciamento, NumeroParcelas, ValorParcela, DataVencimento, DataPagamento) VALUES(8, 5, 300.00, '2019-11-19','2019-11-19');
+
+ALTER TABLE Parcelas ADD ParcelasPagas int;
+

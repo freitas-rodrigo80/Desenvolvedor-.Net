@@ -1,0 +1,28 @@
+CREATE DATABASE Conta;
+
+CREATE TABLE Clientes(
+    Id INT IDENTITY(1,1) NOT NULL,
+    Nome VARCHAR(100),
+    Uf VARCHAR(2)
+    constraint XPKClientes primary key(Id)
+);
+CREATE TABLE Financiamentos(
+    Id INT IDENTITY(1,1) NOT NULL,
+    IdCliente INT NOT NULL,
+    TipoFinancimento INT NOT NULL,
+    ValorTotal DECIMAL NOT NULL,
+    DataVencimento DATETIME NOT NULL
+    constraint XPKFinanciamento primary key(Id)
+);
+alter table Financiamentos add constraint XFKClientes foreign key(IdCliente) references Clientes(Id)
+
+CREATE TABLE Parcelas(
+    Id INT IDENTITY(1,1) NOT NULL,
+    IdFinanciamento INT NOT NULL,
+    NumeroParcelas INT NOT NULL,
+    ValorParcela DECIMAL NOT NULL,
+    DataVencimento DATETIME NOT NULL,
+    DataPagamento DATETIME
+    constraint XPKParcelas primary key(Id)
+);
+alter table Parcelas add constraint XFKFinancimento foreign key(IdFinanciamento) references Financiamentos(Id)

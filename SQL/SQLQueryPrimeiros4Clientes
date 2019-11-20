@@ -1,0 +1,9 @@
+--Listar os primeiros 4 clientes que tenham alguma parcela com mais de 05 dias atrasadas (Data Vencimento maior que data atual E data pagamento nula)
+
+SELECT top 4 c.Nome, c.Uf FROM Clientes as c
+inner JOIN Financiamentos as f
+on c.Id = f.IdCliente
+inner JOIN Parcelas as p
+on f.Id = p.IdFinanciamento
+where p.DataVencimento < CONVERT(CHAR(10), GETDATE()-5,102) AND p.DataPagamento IS NULL
+

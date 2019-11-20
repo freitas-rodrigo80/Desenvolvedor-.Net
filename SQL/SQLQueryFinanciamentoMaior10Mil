@@ -1,0 +1,8 @@
+--Listar todos os clientes que já atrasaram em algum momento duas ou mais parcelas em mais de 10 dias, e que o valor do financiamento seja maior que R$ 10.000,00.
+
+SELECT c.Nome, c.Uf FROM Clientes as c
+inner JOIN Financiamentos as f
+on c.Id = f.IdCliente
+inner JOIN Parcelas as p
+on f.Id = p.IdFinanciamento
+where f.ValorTotal > 10000.00 AND p.DataVencimento < CONVERT(CHAR(10), GETDATE()-10,102) AND p.DataPagamento IS NULL
